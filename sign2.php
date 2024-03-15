@@ -1,5 +1,18 @@
 <?php
 session_start();
+$conn=mysqli_connect('localhost','root','','form') or die("Connection failed");
+if(isset($_POST["user_input"])){
+    $username=$_POST['username'];
+    $email=$_POST['email'];
+    $password=$_POST['password'];
+    $checkuser=mysqli_query($conn,"SELECT * FROM users where username ='$username'");
+    if(mysqli_num_rows($checkuser)> 0){
+        echo "<script>alert('Username already exists!!!')</script>";
+    }else{
+        $query= mysqli_query($conn,"INSERT INTO  users (username,email,password) VALUES ('$username','$email','$password')");
+        echo "<script>alert('User created Succesfully!!!')</script>";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,21 +55,21 @@ session_start();
                 </div>
                 <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
             </form>
-            <form action="" class="sign-up-form">
+            <form action="" method="POST" class="sign-up-form">
                 <h2 class="title">Sign up</h2>
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Username">
+                    <input type="text" name="username" placeholder="Username">
                 </div>
                 <div class="input-field">
                     <i class="fas fa-envelope"></i>
-                    <input type="text" placeholder="Email">
+                    <input type="text" name="email" placeholder="Email">
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password">
                 </div>
-                <input type="submit" value="Sign up" class="btn" id="showPopupBtn">
+                <input type="submit" value="Sign up" name="user_input" class="btn" id="showPopupBtn">
                 <p class="social-text">Or Sign in with social platform</p>
                 <div class="social-media">
                     <a href="#" class="social-icon">
@@ -82,7 +95,6 @@ session_start();
                     <p>to keep connected with us <br>enter your personal details</p>
                     <button class="btn" id="showPopupBtn">Sign in</button>
                 </div>
-                <img src="#" alt="" class="image">
             </div>
             <div class="panel right-panel">
                 <div class="content">
@@ -90,7 +102,6 @@ session_start();
                     <p>enter your personal details <br> and start your journey with us.</p>
                     <button class="btn" id="sign-up-btn">Sign up</button>
                 </div>
-                <img src="#" alt="" class="image">
             </div>
         </div>
     </div>
