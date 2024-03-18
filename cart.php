@@ -17,6 +17,10 @@ if(isset($_GET['remove'])){
 
 }
 ?>
+<?php
+session_start();
+$username = $_SESSION['username'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,6 +59,7 @@ if(isset($_GET['remove'])){
     <section id="page-header">
         <h2>#Your Cart</h2>
     </section>
+    
     <section id="cart" class="section-p1">
         <table width="100%">
         <?php
@@ -126,7 +131,7 @@ if(isset($_GET['remove'])){
             <div class="table_bottom">
                 <a href="shop3.php" class="bottom_btn">Continue Shopping</a>
                 <h3 class="bottom_btn">Grand Total:<span><?php echo $grand_total?>/-</span></h3>
-                <a href="chekout.php"class="bottom_btn">Proceed to checkout</a>
+                <a href="chekout.php"class="bottom_btn1">Proceed to checkout</a>
             </div>
     </section>
           <footer class="footer" style="background-image: url()">

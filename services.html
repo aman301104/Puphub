@@ -9,22 +9,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav >
+    <nav>
         <h2 class ="logo_main">PupHub</h2>
         <ul id="sidemenu">
             <li><a href="index2.php">Home</a></li>
             <li><a href="shop3.php">Shop</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
+       x`     <li><a href="blogs.html">Blogs</a></li>
             <li><a href="guide.html">Guide</a></li>
             <li><a href="contact.php"><i class="fa-solid fa-phone"></i></a></li>
             <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
     </nav>
-    <section id="page-header" style="background-image: url(images/banner.png);">
+    <div id="videowrapper">
+      <div id="fullScreenDiv">
+        <video id="video" role="presentation" preload="auto" playsinline="" crossorigin="anonymous" loop="" muted="" autoplay="" class="blur">
+              <source src="pexels-roman-odintsov-8746813-2048x1080-30fps.mp4" type="video/mp4">
+        </video> 
+        <div id="videoMessage" class="styling"> 
+            <h1>#Our Services</h1>
+            <h2>LEAVE A MESSAGE, We love to hear from you!</h2>
+        </div>   
+      </div>
+    </div>
+    <!-- <section id="page-header" style="background-image: url(images/banner.png);">
         <h2>#Our Services</h2>
         <p style="font-size: larger;">LEAVE A MESSAGE, We love to hear from you!</p>
-    </section>
+    </section> -->
     <div class="container1">
         <div class="box">
           <span><img src="icons8-home-50.png" class="icon" alt=""></span>
@@ -59,16 +70,16 @@
           <button class="btn1">READ MORE</button>
         </div>
         <div class="box">
-          <span><img src="icons8-treatment-50.png" class="icon" alt=""></span>
+          <span><img src="icons8-treatment-64.png" class="icon" alt=""></span>
           <h2 align="center">Pet Treatment</h2>
           <p align="justify">Treat your dogs to a pampering session with our professional pet grooming service. We offer a range of treatments including baths, haircuts, nail trims, and ear cleaning to keep your furry friends looking and feeling their best.</p>
           <button class="btn1">READ MORE</button>
         </div>
       </div>
     <div class="upper">
-    <h1 class="service1">Book Online Vet Consultation - <span class="h11"> a Vet Instantly</span></h1>
-    <h3 class="h12">Book Trusted Veterinary Consultation For Pets Near You</h3>
-    <button class="book">Book Now</button>
+      <h1 class="service1">Book Online Vet Consultation - <span class="h11"> a Vet Instantly</span></h1>
+      <h3 class="h12">Book Trusted Veterinary Consultation For Pets Near You</h3>
+      <button class="book">Book Now</button>
     </div>
     <br>
     <br>
@@ -76,49 +87,52 @@
     <h1 class="rate">Packages<span class="h11"> and </span> Rates</h1>
     <hr size="5px" color="black" width="300px" style="margin-top: 2%;margin-left: 42%;">
     <div class="card1">
-        <div class="inner-card1">
-            <img src="pic1" alt="" >
-            <h2 class="head2">Online Vet</h2>
-            <h2 class="price">$300</h2>
-            <ul class="list">
-                <li>1 time Consultation</li>
-                <li>Call & Video Consultancy</li>
-                <li>Personalized Advice</li>
-            </ul>
-            <button class="intrest">Intrested</button>
-        </div>
-        <div class="inner-card1">
-            <h2 class="head3">Nutrition Consultation</h2>
-            <h2 class="price">$500</h2>
-            <ul class="list">
-                <li>1:1 Call/Video Consultation</li>
-                <li>Healthy Dog Feeding Guide</li>
-                <li>Pet Parenting Management</li>
-            </ul>
-            <button class="intrest">Intrested</button>
-        </div>
     </div>
-    <hr>
+   
     <div class="card2">
-        <div class="inner-card1">
-            <h2 class="head3">Behavioral Consultations</h2>
-            <h2 class="price">$600</h2>
-            <ul class="list">
-                <li>Barking</li>
-                <li>Rushing the front door​</li>
-                <li>Destructive behavior</li>
-            </ul>
-            <button class="intrest">Intrested</button>
+        <div class="pro">
+          <img src="p1.jpg" alt="">
+          <h2 class="head2">Online Vet</h2>
+          <h2 class="price">$300</h2>
+          <ul class="list">
+              <li>1 time Consultation</li>
+              <li>Call & Video Consultancy</li>
+              <li>Personalized Advice</li>
+          </ul>
+          <button class="intrest">Intrested</button>
         </div>
-        <div class="inner-card1">
-            <h2 class="head2">Essential Care</h2>
-            <h2 class="price">$750</h2>
-            <ul class="list">
-                <li>1 Week Call/Video Consultancy</li>
-                <li>Curated vet recommendations</li>
-                <li>Ticks & Fleas Preventive</li>
-            </ul>
-            <button class="intrest">Intrested</button>
+        <div class="pro">
+          <img src="p2.png" alt="">
+          <h2 class="head3">Nutrition Consultation</h2>
+          <h2 class="price">$500</h2>
+          <ul class="list">
+              <li>1:1 Call/Video Consultation</li>
+              <li>Healthy Dog Feeding Guide</li>
+              <li>Pet Parenting Management</li>
+          </ul>
+          <button class="intrest">Intrested</button>
+        </div>
+        <div class="pro">
+          <img src="p3.jpeg" alt="">
+          <h2 class="head3">Behavioral Consultations</h2>
+          <h2 class="price">$600</h2>
+          <ul class="list">
+              <li>Barking</li>
+              <li>Rushing the front door​</li>
+              <li>Destructive behavior</li>
+          </ul>
+          <button class="intrest">Intrested</button>
+        </div>
+        <div class="pro">
+          <img src="p4.webp" alt="">
+          <h2 class="head2">Essential Care</h2>
+          <h2 class="price">$750</h2>
+          <ul class="list">
+              <li>1 Week Call/Video Consultancy</li>
+              <li>Curated vet recommendations</li>
+              <li>Ticks & Fleas Preventive</li>
+          </ul>
+          <button class="intrest">Intrested</button>
         </div>
     </div>
     <hr size="5px" color="black" width="300px" style="margin-top: 2%;margin-left: 42%;">
@@ -127,7 +141,7 @@
     <br>
     <div class="card3">
         <div>
-            <img src="doc1.webp" alt="" width="80%" style="border-radius: 8%;">
+            <img src="s1.jpg" alt="">
             <h3>Dr.Sanjeev kapoor</h3>
             <ul>
                 <li>7+ years of experience</li>
@@ -135,24 +149,23 @@
             </ul>
         </div>
         <div>
-            <img src="doc1.webp" alt="" width="80%" style="border-radius: 8%;">
-            <h3>Dr.Sanjeev kapoor</h3>
+            <img src="s2.jpg" alt="">
+            <h3>Dr.James Thomas</h3>
             <ul>
-                <li>7+ years of experience</li>
+                <li>4+ years of experience</li>
                 <li>B.V.Sc & A.H, M.V.Sc Veterinary Surgery<br> & Radiology, PhD. Scholar</li>
             </ul>
         </div>
         <div>
-            <img src="doc1.webp" alt="" width="80%" style="border-radius: 8%;">
-            <h3>Dr.Sanjeev kapoor</h3>
+            <img src="s3.webp" alt="">
+            <h3>Dr.Elva Dicostta</h3>
             <ul>
-                <li>7+ years of experience</li>
-                <li>B.V.Sc & A.H, M.V.Sc Veterinary Surgery<br> & Radiology, PhD. Scholar</li>
+                <li>9+ years of experience</li>
+                <li>Heart and Nuero Surgeon, M.V.Sc VeSurgery<br>  & Radiology, PhD. Scholar</li>
             </ul>
         </div>
     </div>
     <br>
-    
 </body>
 <footer class="footer">
     <div class="footer-top-section">

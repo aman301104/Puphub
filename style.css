@@ -572,6 +572,13 @@ transition-duration: 3ms; }
   color: var(--white);
 }
 
+.bottom_btn1{
+  background-color: #0ea5e9;
+  border-radius: 5px;
+  width: 30%;
+  padding: 1%;
+  /* height: 30%; */
+}
 .footer-list-title {
   color: var(--white);
   font-size: var(--fs-5);
@@ -1280,6 +1287,7 @@ transition-duration: 3ms; }
 .quantity_box .update_quantity{
   width: 40%;
   padding:5px 0px 20px;
+  background-color: #0ea5e9;
 }
 #cart table{
   width: 100%;

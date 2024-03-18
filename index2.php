@@ -1,14 +1,14 @@
 <?php
 session_start();
 $conn=mysqli_connect('localhost','root','','form') or die("Connection failed");
-if(isset($_POST["add_to_form"])){
-    $breed=$_POST['name'];
-    $query= mysqli_query($conn,"TRUNCATE TABLE data");
-    foreach($breed as $item){
-      $query= mysqli_query($conn,"INSERT INTO  data (name) VALUES ('$item')");
-
-    }
+?>
+<?php
+if (!isset($_SESSION['username'])) {
+    // If the user is not logged in, redirect them to the login page or handle it appropriately
+    header("Location: sign2.php");
+    exit();
 }
+$username = $_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -148,11 +148,11 @@ if(isset($_POST["add_to_form"])){
       <h2 id="center_text">
         <span>Feature</span> Products
       </h2>
-      <p id="center_text">Our Recommendations</p>
+      <p id="center_text">Hi <span><?php echo $username;?></span>here are some of Recommendations shown on the basis of your input</p>
       <section id="product1" class="section-p1">
           <div class="pro-container">
             <?php
-            $select_products=mysqli_query($conn,"SELECT product_details.* FROM product_details JOIN data ON product_details.name = data.name");
+            $select_products=mysqli_query($conn,"SELECT product_details.* FROM product_details JOIN $username ON product_details.name = $username.name");
             if (mysqli_num_rows($select_products) > 0) {
                 while ($fetch_product = mysqli_fetch_assoc($select_products)) {
             ?>
